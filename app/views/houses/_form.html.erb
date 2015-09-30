@@ -1,0 +1,6 @@
+<%= simple_form_for @house do |f| %>
+  <%= f.input :name %>
+  <%= f.input :mascot %>
+  <%= f.association :school, collection: School.order(:name), prompt: "Choose a School", label_method: :name%>
+  <%= f.button :submit %>
+<% end %>

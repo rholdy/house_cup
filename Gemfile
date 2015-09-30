@@ -51,6 +51,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
+gem 'simple_form'
 
 group :development, :test do
   gem 'dotenv-rails'

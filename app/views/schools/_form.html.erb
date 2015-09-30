@@ -1,0 +1,5 @@
+<%= simple_form_for @school do |f| %>
+  <%= f.input :name %>
+  <%= f.association :user, collection: User.order(:email), prompt: "Choose a User", label_method: :email%>
+  <%= f.button :submit %>
+<% end %>
