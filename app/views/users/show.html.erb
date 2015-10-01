@@ -1,7 +1,8 @@
-<p id="notice"><%= notice %></p>
 
 <%= @user.email %> |
-
+<% @schools.each do |school| %>
+  <%= link_to school.name, schools_path(school)   %>
+<% end %> 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 <%= link_to 'Add School', new_school_path(@user) %>

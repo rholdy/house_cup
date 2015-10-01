@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
 
+<h1><%= @school.name %></h1>
+<% @houses.each do |house| %>
+  <%= link_to house.name, house_path(house)  %>
+<% end %>
+<%= link_to 'Headmaster', users_path(@school.user) %> |
 <%= link_to 'Edit', edit_school_path(@school) %> |
 <%= link_to 'Back', schools_path %>

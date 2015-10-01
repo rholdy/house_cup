@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<%= @house.name  %>
+<%= @house.mascot %>
+<%= @house.score %>
+<%= link_to 'School', school_path(@house.school) %> |
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'Back', houses_path %>

@@ -10,11 +10,12 @@ class SchoolsController < ApplicationController
   # GET /schools/1
   # GET /schools/1.json
   def show
+    @houses = @school.houses
   end
 
   # GET /schools/new
   def new
-    @school = School.new(user: @user)
+    @school = School.new
   end
 
   # GET /schools/1/edit
@@ -69,6 +70,6 @@ class SchoolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def school_params
-      params[:school].permit(:name, :user)
+      params[:school].permit(:name, :user_id)
     end
 end
