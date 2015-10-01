@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :houses
   resources :schools
   resources :users
+  
+  get 'api/v1/scoreboard' => 'api/v1/scoreboard#index', as: :scoreboard
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
